@@ -6,6 +6,8 @@ import WindowWidthReadJson from './useEffects';
 import CounterAndBgToggle from './useMemos';
 import FocusSavingPreviousInfo from './useRefs';
 import BgToggle from './useContexts';
+import UseReducerPortions from './useReducers';
+import CallbackComponent from './useCallbacks';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +18,8 @@ root.render(
     <CounterAndBgToggle />
     <FocusSavingPreviousInfo />
     <BgToggle />
+    <UseReducerPortions />
+    <CallbackComponent />
   </>
 );
 

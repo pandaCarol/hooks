@@ -13,10 +13,15 @@ export default function FuncitonContextComponent () {
     }
 
     return(
-        <div style={themeStyle}>
+        <div style={themeStyle} value={darkTheme}>
             <h2>useContext</h2>
-            <button onClick={toggleTheme}>change backgrond</button>
-            <div>Hello, current backgrond is {darkTheme ? "dark" : "light"}</div>
+            <div className="toggle">
+                <button onClick={toggleTheme}></button>
+                <button className="off"></button>
+                <button className="on"></button>
+            </div>
+            
+            {/*<div>Hello, current backgrond is {darkTheme ? "dark" : "light"}</div> */}
         </div>
     )
 }

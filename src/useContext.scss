@@ -1,0 +1,67 @@
+
+#useContextFunc {
+    .toggle {
+        position: relative;
+        button {
+            position: absolute;
+            border: none;
+            border-radius: 30px;
+            width: 60px;
+            height: 30px;
+            z-index: 1;
+            background-color: rgb(212, 220, 226,0.5);
+            
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &.off {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background-color: gray;
+                left: 1px;
+                top: 0px;
+                z-index: 0;
+            }
+    
+            &.on {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background-color: lightblue;
+                left: 28px;
+                top: 0px;
+                z-index: 0;
+            }
+        }
+
+
+    }
+    
+    div{
+       &[value="true"] {
+            .toggle {
+                button {
+                    background-color: rgb(212, 221, 221,0.5);
+                    &.on {
+                        opacity: 0;
+                    } 
+                }
+            }
+       }
+
+        &[value="false"] {
+            .toggle {
+                button {
+                    background-color: rgba(74, 109, 206, 0.5);
+                    &.off {
+                        opacity: 0;
+                    } 
+                }
+            }
+        }
+    }
+
+}
+
